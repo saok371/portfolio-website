@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DjangoStudio Portfolio</title>
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="{% static 'aos.css' %}">
+</head>
+
+<body >
+<header class="header d-flex  align-items-center w-100">
+<div class="container-fluid">
+<div class="row">
+<div class="col-6 d-flex  logo "><a href="" class="text-decoration-none fw-bolder">{{logo}}</a></div>
+<div class="col-md-6  d-md-flex justify-content-md-end d-none  ">
+{%for link in links%}
+<a href="#{{link.id}}"class="text-decoration-none link m-md-3 " >{{link.name}}</a>
+{%endfor%}
+</div>
+<div class="col-md-6 nav  d-flex  d-md-none ">
+<div class="nav-links">
+{%for link in links%}
+<a href="#{{link.id}}"class="text-decoration-none   m-md-3 " >{{link.name}}</a>
+{%endfor%}
+</div>
+</div>
+<div class="col-6 d-flex menu-icon position-relative justify-content-end align-items-center  d-md-none">
+<div   class="menu-bars"><i class="fas fa-bars" ></i></div>
+<div   class="menu-times"><i class="fas fa-times" ></i></div>
+</div>
+
+</div>
+</div>
+</header>
+
+<section id="home" class="home d-flex  align-items-center  vh-100">
+<div class="container home-content "    >
+<div class="row justify-content-center flex-column-reverse flex-md-row">
+<div class="col-12 col-md-7  home-text" data-aos="fade-up" data-aos-delay="100">
+<h2>I am <span class="fw-bolder ">Sampson Okyere Appiah</span></h2>
+<h5 class="fw-bolder " >Full Stack Web Developer</h5>
+<p class="  mb-3" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus tenetur, numquam excepturi ducimus aliquam consequuntur. Dolore nesciunt quibusdam a nobis accusantium mollitia impedit blanditiis aliquid non repellat labore tenetur sunt, voluptatum reprehenderit architecto quos? Cumque, sequi molestiae eius, pariatur harum, enim possimus nam impedit quae ad ipsa quasi perferendis hic.</p>
+<a href="#contact" class="home-button text-decoration-none p-1  rounded" >Contact Me</a>
+</div>
+<div class="col-12 col-md-5  d-flex mb-5 m-md-0 justify-content-center justify-content-md-end align-items-center ">
+<img class=" img-thumbnail home-img " src="{% static 'images/sam 1.jpeg' %}" alt="">
+</div>
+</div>
+</div>
+
+</section>
+
+<section id="about" class="About d-flex align-items-center  py-5  ">
+<div class="container">
+<div class="row justify-content-center">
+<div class="about-header text-center pb-4">
+<h1 class="fw-bolder ">About me</h1>
+</div>
+<div class="col-lg-4 col-sm-8  d-flex justify-content-sm-center  justify-content-center  mb-4" data-aos="fade-right" data-aos-delay="100" >
+<img class=" img-thumbnail  " src="{% static 'images/sam 2.jpeg' %}" alt="">
+</div>
+<div class="col-lg-6 col-sm-8 text-white about-text justify-content-between" data-aos="fade-left" data-aos-delay="100">
+<h2>I am <span class="fw-bolder">Full Stack Web Developer </span> </h2>
+<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nihil eos iusto eius nemo labore aliquid ducimus recusandae, accusantium sapiente saepe ea distinctio soluta dignissimos ab. Sunt, hic. Vero, praesentium?. Officiis nihil eos iusto eius nemo labore aliquid ducimus recusandae, accusantium sapiente saepe ea distinctio soluta dignissimos ab. Sunt, hic. Vero, praesentium? Officiis nihil eos iusto eius nemo labore aliquid ducimus recusandae, accusantium sapiente saepe ea distinctio soluta dignissimos ab. Sunt, hic. Vero, praesentium?</p>
+<a href="#contact" class="about-button text-decoration-none p-2 rounded">Download CV</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="skills" class="skills   py-5 ">
+<div class="container">
+<div class="row justify-content-center"></div>
+<div class="col-12 skills-header text-center py-2 ">
+<h1 class="fw-bolder ">My Skills</h1>
+</div>
+
+<div class="row justify-content-center mx-4 gap-3" data-aos="fade-right" data-aos-delay="100" >
+<div class="col-md-3 col-sm-8 HTML text-center p-3 " >
+<img src="{% static 'images/html-5.png' %}" alt="">
+<h5>HTML 5</h5>
+<p>Lorem ipsum dolor sit amet.</p>
+<a href="#contact" class="text-decoration-none p-1 rounded">Read more</a>
+</div>
+<div class="col-md-3 col-sm-8 CSS text-center p-3 ">
+<img src="{% static 'images/css-3.png' %}" alt="">
+<h5>CSS 3</h5>
+<p>Lorem ipsum dolor sit amet.</p>
+<a href="#contact" class="text-decoration-none p-1 rounded">Read more</a>
+</div>
+</div>
+
+<div class="row  justify-content-center gap-3  mt-3 mx-4 " data-aos="fade-left" data-aos-delay="100">
+<div class="col-md-3 col-sm-8 JavaScript text-center  p-3">
+<img src="{% static 'images/icons8-javascript-logo-500.png' %}" alt="">
+<h5>JavaScript</h5>
+<p>Lorem ipsum dolor sit amet.</p>
+<a href="#contact" class="text-decoration-none p-1   rounded">Read more</a>
+</div>
+<div class="col-md-3 col-sm-8 Python text-center p-3 ">
+<img src="{% static 'images/pngaaa.com-5376941.png' %}" alt="">
+<h5>Python</h5>
+<p>Lorem ipsum dolor sit amet.</p>
+<a href="#contact" class="text-decoration-none p-1  rounded">Read more</a>
+</div>
+<div class="col-md-3 col-sm-8 React text-center p-3 ">
+<img src="{% static 'images/react.png' %}" alt="">
+<h5>React</h5>
+<p>Lorem ipsum dolor sit amet.</p>
+<a href="#contact" class="text-decoration-none p-1 rounded">Read more</a>
+</div>
+</div>
+
+<div class="row justify-content-center gap-3 mt-3 mx-4" data-aos="fade-right" data-aos-delay="100">
+<div class="col-md-3 col-sm-8  Django text-center p-3 mb-md-3">
+<img src="{% static 'images/pngaaa.com-4169339.png' %}" alt="">
+<h5>Django</h5>
+<p>Lorem ipsum dolor sit amet.</p>
+<a href="#contact" class="text-decoration-none p-1 rounded">Read more</a>
+</div>
+<div class="col-md-3 col-sm-8 Bootstrap text-center p-3 mb-3">
+<img src="{% static 'images/pngaaa.com-3801770.png' %}" alt="">
+<h5>Bootstrap 5</h5>
+<p>Lorem ipsum dolor sit amet.</p>
+<a href="#contact" class="text-decoration-none p-1 rounded">Read more</a>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<section id="contact" class="contact  py-5 " >
+<div class="container">
+<div class="contact-header text-center ">
+<h1 class="fw-bolder ">Contact me</h1>
+</div>
+<div class="row ">
+<div class="col-md-6 col-sm-12 mb-md-0  mb-lg-0 mb-xl-0  mb-xxl-0 mb-5"data-aos="fade-right" data-aos-delay="100" >
+<h4>Get in Touch</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nostrum fuga modi maxime, magni reiciendis quos necessitatibus aliquid quae aut!</p>
+<div class="info">
+<div class="info-icon"><i class="fas fa-user"></i></div>
+<div>
+<div >Name</div>
+<div >Sampson Appiah Okyere</div>
+</div>
+</div>
+<div class="info mt-4">
+<div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+<div>
+<div >Location</div>
+<div >N716, Mixer Street, Ablekuma-Agape, Accra-Ghana</div>
+</div>
+</div>
+<div class="info  mt-4">
+<div class="info-icon"><i class="fas fa-envelope"></i></div>
+<div>
+<div >Email</div>
+<div >okyeresampson03@gamil.com</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-sm-12 " data-aos="fade-left" data-aos-delay="100" >
+<form method="POST" id="form" >
+{% csrf_token %}
+{{contact_form|crispy}}
+<input   class="send btn btn-primary mb-3" type="submit" value="Send Message">
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="footer d-flex align-items-center col-12 justify-content-center  ">
+<p class="mb-0 text-center">Copyright &copy; || Sampson Programming. All Right Reserved.</p>
+</footer>
+
+<div id="overlay">
+ <div id="preloader"></div>
+</div>
+
+<script src="{% static 'bootstrap.min.js' %}"></script>
+<script src="{% static 'aos.js' %}"></script>
+<script src="{% static 'script.js' %}"></script>
+ <script src="{% static 'fontawesomefree/js/fontawesome.js' %}"></script>
+ <script src="{% static 'fontawesomefree/js/solid.js' %}"></script>
+<script src="{% static 'fontawesomefree/js/brands.js' %}"></script>
+<script>
+window.addEventListener('load', () => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    })
+  })
+</script>
+</body>
+</html>
